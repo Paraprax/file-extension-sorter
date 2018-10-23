@@ -19,7 +19,9 @@
     "cat_you_are_the_worst.mp4"
   ];
 
-var sortedFiles = []; // empty array to hold files sorted by algorithm
+var imageFiles = [];
+var movieFiles = [];
+var allSortedFiles = []; // empty array to hold files sorted by algorithm
 
 $(function() {  // for-loop function to print 'files' var to 'start' <ul> as list elements
 
@@ -32,16 +34,36 @@ $(function() {  // for-loop function to print 'files' var to 'start' <ul> as lis
 
 });
 
+function sortByExtension() {
 
+    for (var i = 0; i < files.length; i++){
 
+        if (files[i] == files[i]) // just checking the output works
+        {
+            imageFiles.push(files[i]);
+        }
+        else 
+        {
+            movieFiles.push(files[i]);
+        }
 
-$('#go').on("click", function() {
+       
+    }
 
+    console.log(imageFiles);
+
+   $(allSortedFiles).append(imageFiles + movieFiles);
     
+}
 
-    for (var s = 0; s < sortedFiles.length; s++) // for-loop function to print 'sortedFiles' var to 'result' <ul> as list elements
+
+sortByExtension();
+
+$('button').on("click", function() {
+
+    for (var s = 0; s < allSortedFiles.length; s++) // for-loop function to print 'sortedFiles' var to 'result' <ul> as list elements
     {
-        $('#result').append("<li>" + sortedFiles[s] + "</li>");
+        $('#result').append("<li>" + allSortedFiles[s] + "</li>");
     }
 
 });
