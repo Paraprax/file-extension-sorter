@@ -19,15 +19,29 @@
     "cat_you_are_the_worst.mp4"
   ];
 
+var sortedFiles = []; // empty array to hold files sorted by algorithm
 
-console.log(files);
+$(function() {  // for-loop function to print 'files' var to 'start' <ul> as list elements
 
-function listFiles(files) {
+    files.sort(); //starts by sorting array into alphabetical order(a native js function)
 
     for (var f = 0; f < files.length; f++)
     {
         $('#start').append("<li>" + files[f] + "</li>");
     }
-}
 
-listFiles(files);
+});
+
+
+
+
+$('#go').on("click", function() {
+
+    
+
+    for (var s = 0; s < sortedFiles.length; s++) // for-loop function to print 'sortedFiles' var to 'result' <ul> as list elements
+    {
+        $('#result').append("<li>" + sortedFiles[s] + "</li>");
+    }
+
+});
