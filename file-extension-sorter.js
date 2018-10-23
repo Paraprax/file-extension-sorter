@@ -18,3 +18,6 @@
     "omg_my_sneakers.avi",
     "cat_you_are_the_worst.mp4"
   ];
+
+
+console.log(files);
