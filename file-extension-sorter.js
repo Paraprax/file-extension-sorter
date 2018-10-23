@@ -21,3 +21,13 @@
 
 
 console.log(files);
+
+function listFiles(files) {
+
+    for (var f = 0; f < files.length; f++)
+    {
+        $('#start').append("<li>" + files[f] + "</li>");
+    }
+}
+
+listFiles(files);
